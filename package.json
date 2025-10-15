@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index --config vedansh.yaml",
+    "start": "node dist/index --config fool.yaml",
     "build": "tsc -p .",
     "dev": "tsc-watch --onSuccess \"npm start\""
   },
