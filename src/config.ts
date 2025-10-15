@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import { parse } from "yaml";
 import { mainConfigSchema } from "./schema-config.js";
 
-async function parseYamlConfig(filePath: string) {
+export async function parseYamlConfig(filePath: string) {
   const fileContent = await fs.readFile(filePath, "utf8");
   const configParsed = parse(fileContent);
   return JSON.stringify(configParsed);
@@ -16,5 +16,6 @@ export async function validateConfiguration(config: string) {
     return validatedConfig;
   } catch (error) {
     console.log("Error validating the configuration");
+    throw new Error("No valid configuration");
   }
 }
