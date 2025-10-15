@@ -17,7 +17,3 @@ server:
         - node1
         - node2
         - node3
-
-    - path: /admin
-      upstreams:
-        - node2
